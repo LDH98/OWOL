@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수평 배열 방법</title>
+    <style>
+
+
+        .left1{
+            display: inline-block;
+        }
+
+        .right1{
+            width: 1000px;
+            border: 1px solid #000;
+            margin-bottom: 50px;
+        }
+
+        .right1, .right2, .right3{
+            width: 400px;
+            background-color: rgb(153, 153, 153);
+        }
+
+        img{
+            width: 400px;
+        }
+
+        /*여기까지 Inline 활용 수평 배열*/
+
+        .default2{
+            overflow: hidden;
+        }
+
+        .left2{
+            float: left;
+        }
+
+        .right2{
+            float: right;
+        }
+
+        /*여기까지 float 활용 수평 배열*/
+
+        .default3{
+            display: table;
+        }
+
+        .left3{
+            display: table-cell;
+        }
+        
+        .right3{
+            display: table-cell;
+        }
+
+        /*여기까지 table 활용 수평 배열*/
+    </style>
+</head>
+<body>
+    <div class="default1">
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="right1">
+            <h1>아무거나 적어봤음</h1>
+            <h2>일단 아무거나 적음</h2>
+            <p>수평 배열하는 여러 방법들 (inline 사용)</p>
+        </div>
+    </div>
+
+    <div class="default2">
+        <div class="left2"><img src="../image/배경.png"></div>
+        <div class="right2">
+            <h1>아무거나 적어봤음</h1>
+            <h2>일단 아무거나 적음</h2>
+            <p>수평 배열하는 여러 방법들 (float 사용)</p>
+        </div>
+    </div>
+
+    <div class="default3">
+        <div class="left3"><img src="../image/배경.png"></div>
+        <div class="right3">
+            <h1>아무거나 적어봤음</h1>
+            <h2>일단 아무거나 적음</h2>
+            <p>수평 배열하는 여러 방법들</p>
+        </div>
+    </div>
+</body>
+</html>

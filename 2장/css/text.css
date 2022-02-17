@@ -1,0 +1,20 @@
+.hello {
+    position: relative;
+    background-image: url("../img/지구.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    width: 400px;
+    height: 300px;
+}
+
+.hello .text {
+    bottom: 0;
+    color: brown;
+    font-family: Verdana !important;
+    font-size: 40px !important;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0 0 5px #000;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sale1.css" type="text/css">
+</head>
+<body>
+    <div id="program">
+        <img src="img/icon0.png" width="150">
+        <ul>
+            <li>
+                <label>원래 가격</label>
+                <input id="price" type="text">
+            </li>
+            <li>
+                <label>할인율</label>
+                <input id="rate" type="text">
+            </li>
+            <li>
+                <button type="button" onclick="sale()">할인 계산하기</button>
+            </li>
+        </ul>
+    </div>
+    <div id="show"></div>
+    <script>
+        function sale(){
+            var oPrice = document.querySelector("#price").value;
+            var sale = document.querySelector("#rate").value; 
+
+            if(oPrice > 0 && sale > 0){
+                var savedPrice = oPrice * (sale/100);
+                var result = oPrice - savedPrice;
+            }
+
+            document.querySelector("#show").innerHTML = "원래 가격은 " + oPrice + "원이고, 할인율은 " + 
+            sale + "%이다. 할인값은 " + savedPrice + "원이며 할인된 가격은 " + result + "원이다.";
+        }
+    </script>
+</body>
+</html>

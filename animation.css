@@ -1,0 +1,44 @@
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.oh{
+    width: 1180px;
+    height: 500px;
+    border: 1px solid red;
+}
+
+article{
+    justify-content: center;
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: blue;
+    margin: 10px 50px auto;
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-play-state: running;
+    transform: rotate(50deg);
+    transition: all 0.2s;
+    border-radius: 30%;
+}
+
+article:hover{
+    background-color: red;
+    animation-play-state: paused;
+}
+
+a{
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}

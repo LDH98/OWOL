@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 20px;
+    background: gray;
+}
+
+fieldset:last-of-type{
+    border: none;
+}
+
+.back{
+    border: 1px solid #000;
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+}
+
+.back legend{
+    font: bold 16px/1;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
+
+.back ul li{
+    list-style: none;
+    line-height: 30px;
+    padding: 5px 10px;
+}
+
+.back ul li label{
+    float: left;
+    width: 110px;
+    font-size: 13px;
+}
+
+.back ul li input{
+    border: 1px solid red;
+    padding: 4px 0px 4px 10px;
+    border-radius: 4px;
+}
+
+.back ul li input:hover{
+    border: 1px solid gray;
+}
+
+.back ul li #level{
+    border: none;
+}
+
+.back ul li #num{
+    border: 1px solid rgb(184, 184, 184);
+}
+
+
+/*lower*/
+
+.lower{
+    margin-top: 30px;
+}
+
+.lower #name, #mail{
+    color: rgb(144, 144, 144);
+}
+
+.sub{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sub #but{
+    padding: 5px 25px 5px 25px;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.sub #but:hover{
+    background: rgb(51, 51, 51);
+    color: #fff;
+}

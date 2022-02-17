@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+        const people = {
+            firstname : prompt("성을 입력하시오."),
+            lastname : prompt("이름을 입력하시오."), 
+            age : prompt("나이를 입력하시오."), 
+            eyecolor : prompt("눈동자 색을 입력하시오.")}
+
+            document.getElementById("demo").innerHTML =
+            people.lastname + " 님은 " + people.age + "살 입니다.";
+    </script>
+</body>
+</html>

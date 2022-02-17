@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 활용</title>
+    <style>
+        div{
+            border: 1px solid #000;
+        }
+
+        .default1 {
+            display: grid;
+            grid-template-columns: 500px 500px 500px 500px;
+            grid-template-rows: 500px 500px 500px 500px;
+            grid-gap: 100px; /*자식 요소 사이 갭 설정*/
+            align-items: center;
+            justify-content: space-around; /*자식 요소 위치 선정*/
+        }
+
+        .left1 img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1 {
+            border-bottom: 2px solid #000;
+        }
+
+        .default1 > * {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="default1">
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="left1"><img src="../image/배경.png"></div>
+        <div class="right1">
+            <h1>아무거나 적어봤음</h1>
+            <h2>일단 아무거나 적음</h2>
+            <p>수평 배열하는 여러 방법들 (inline 사용)</p>
+        </div>
+    </div>
+</body>
+</html>
