@@ -1,49 +1,114 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul, li, a {
-            list-style: none;
-            text-decoration: none;
-        }
-
-        header {
-            width: 100%;
-            border-bottom: 1px solid gray;
-        }
-
-        .inner {
-            display: flex;
-        }
-
-        .a{
-            right: 0;
-        }
-    </style>
+    <title>네이버 메인 만들기</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 <body>
-    <header>
-        <div class="inner">
-            <h1><a href="#">Limdong</a></h1>
+    <div class="header">
+        <div class="banner_top">banner</div>
+        <div class="tnb">
+            <span class="btn_wrap">
+                <a href="#">시작페이지</a>
+            </span>
+            <span class="btn_wrap">
+                <a href="#">쥬니버</a>
+                <a href="#">해피빈</a>
+            </span>
+        </div>
 
-            <div class="a">
-                <ul>
-                    <li>home</li>
-                    <li>facebook</li>
-                    <li>instagram</li>
-                    <li>youtube</li>
-                </ul>
+        <div class="main">
+            <div class="container">
+                <div class="logo">
+                    <h1>Limdong</h1>
+                </div>
+                <div class="search">
+                    <form>
+                        <input type="search">
+                        <button type="submit">
+                            <span class="sr-only">검색</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </header>
+
+        <div class="menu">
+            <div class="container">
+                <div class="navi_wrap">
+                    <ul class="navi_list type-green">
+                        <li class="navi_item">
+                            <a href="#" class="navi_link">
+                                <span class="navi_text">메일</span>
+                            </a>
+                        </li>
+                        <li class="navi_item">
+                            <a href="#" class="navi_link">
+                                <span class="navi_text">카페</span>
+                            </a>
+                        </li>
+                        <li class="navi_item">
+                            <a href="#" class="navi_link">
+                            <span class="navi_text">블로그</span>
+                        </a>
+                        </li>
+                        <li class="navi_item">
+                            <a href="#" class="navi_link">
+                                <span class="navi_text">지식IN</span>
+                            </a>
+                        </li>
+                        <li class="navi_item">
+                            <a href="#" class="navi_link">
+                                <span class="navi_text">쇼핑</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navi_list type-black">
+                    <li class="navi_item">
+                        <a href="#" class="navi_link">
+                            <span class="navi_text">사전</span>
+                        </a>
+                    </li>
+                    <li class="navi_item">
+                        <a href="#" class="navi_link">
+                            <span class="navi_text">뉴스</span>
+                        </a>
+                    </li>
+                    <li class="navi_item">
+                        <a href="#" class="navi_link">
+                            <span class="navi_text">증권</span>
+                        </a>
+                    </li>
+                    <li class="navi_item">
+                        <a href="#" class="navi_link">
+                            <span class="navi_text">부동산</span>
+                        </a>
+                    </li>
+                    <li class="navi_item">
+                        <a href="#" class="navi_link">
+                            <span class="navi_text">지도</span>
+                        </a>
+                    </li>
+                    </ul>
+                    <a href="#" class="btn-more">더보기</a>
+                </div>
+
+                <div class="info">
+                    <span class="icon">icon</span>
+                    <span class="temp">-6.9º</span>
+                    <span class="temp_min">-9.0</span>
+                    <span class="division">/</span>
+                    <span class="temp_max">-4.0</span>
+                    <span class="area">구월동</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body"></div>
+    <div class="footer">footer</div>
 </body>
 </html>
