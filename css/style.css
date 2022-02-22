@@ -2,19 +2,24 @@ body {
     margin: 0;
     padding: 0;
 }
+
 ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
-div {
-    display: block;
-}
 .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header .container {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -153,64 +158,111 @@ div {
     text-decoration: underline;
 }
 
-.header .menu .container .weather {
+.header .menu .container .info {
 
 }
-.weather .icon {}
-.weather .temp { font-weight: bold;}
+.info .icon {}
+.info .temp { font-weight: bold;}
 .temp_min { color: blue; }
 .temp_max { color: red; }
-.weather .area { color: grey; font-size: 12px;}
-.weather .division { color: #ddd; }
-.min + .max::before {
+.info .area { color: grey; font-size: 12px;}
+.info .division { color: #ddd; }
+.min + .max:before {
     content: "/";
     color: #ddd;
 }
-
+.info > * {
+    line-height: 50px;
+    vertical-align: middle;
+}
 /* 헤더 영역 끝 */
-.body{
-    width: 1000px;
-    height: 500px;
-    border: 1px solid red;
-    margin: 10px auto;
+.body .main > * {
+    margin: 10px 0;
 }
-
-.body div {
-    width: 100%;
-    outline: 1px solid rgb(255, 177, 169);
+.body * {
+    border: 1px solid rgb(255, 193, 193);
 }
-.body .container {
-    justify-content: space-between;
-}
-.body .press_list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.body .press_item {
+.body > .container {
     display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid greenyellow;
-    height: 100px;
 }
-.body .press_item .btn_wrap {
-    position: absolute;
-    display: block;
-    width: 50%;
-    background-color: #ddd;
-}
-.body .press_item .btn_wrap a {
-    font-size: 12px;
+.body .main {
+    margin: 20px 20px 20px 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 70%;
 }
 .body .side {
-    flex: 0 0 35%;
+    margin: 20px 0 20px 20px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 30%;
 }
 
-/* body 영역 끝 */
-.footer {
-    height: 500px;
-    background-color: rgb(240, 240, 240);
-    border-top: 1px solid #ddd;
+.news-line {
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    clear: both;
 }
+.news-line > * {
+    display: inline;
+    line-height: 18px;
+    vertical-align: middle;
+}
+.news-line .company {
+    float: left;
+    font-weight: 700px;
+    font-size: 14px;
+}
+.news-line .company:after{
+    content: ">";
+    padding: 0 5px;
+}
+.news-line .title {
+    float: left;
+    width: 200px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news-btn {
+    float: right;
+    overflow: hidden;
+}
+.news-btn > li {
+    float: left;
+}
+
+.news-btn > li:not(:first-child) {
+    margin-left: 10px;
+}
+
+p {
+    margin: 0;
+}
+.news {
+    height: 174px;
+}
+.table {
+    width: 100%;
+}
+.table .tablecell {
+    display: table-cell;
+    padding: 10px;
+    width: 150px;
+    height: 20px;
+}
+.table .tablecell .container {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table .tablecell a {
+    font-size: 12px;
+    background-color: #ddd;
+    border: none;
+}
+/* 테이블 셀 쓰면 안되는 이유 */
