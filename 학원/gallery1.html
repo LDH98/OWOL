@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .container {
+
+        }
+
+        .thum-list {
+            position: relative;
+            display: grid;
+            grid-template-areas:
+            'li1 li2'
+            'li3 li4'
+            ;
+            border: 1px solid red;
+            transition: 1s all;
+            width: 300px;
+        }
+
+        .thum-list > li {
+            width: 100%;
+            height: 100px;
+        }
+
+        .thum-list > li > img {
+            width: 100%; height: 100%;
+        }
+
+        button {
+            position: absolute;
+            cursor: pointer;
+            width: 20px; height: 20px;
+            color: #fff;
+            background: none;
+            font-size: 20px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .btn-left {
+            left: 10px; top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .btn-right {
+            right: 10px; top: 50%;
+            transform: translate(0, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="thum-list">
+            <button type="button" class="btn-left"><span><</span></button>
+            <button type="button" class="btn-right"><span>></span></button>
+            <li><img src="https://cdn.pixabay.com/photo/2022/04/22/20/13/montmartre-7150549__340.jpg"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2022/04/06/20/29/airplane-7116299__340.jpg"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2021/11/22/04/21/drink-6815800__340.jpg"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2022/04/21/19/47/lion-7148207__340.jpg"></li>
+        </ul>
+    </div>
+    <div class="big-thum"></div>
+    <script>
+        $(document).ready(function() {
+            $('.thum-list > li').click(function() {
+                // $('.big-thum').append().html("12");
+                // $('.big-thum').html('<img>').attr('src', $(this));
+                $('.big-thum').append().html($(this).html());
+                console.log(this);
+            });
+        })
+
+        $('.btn-right').click(function() {
+            $('.thum-list').css('transform', 'translateX(-100%)');
+        })
+            // $('.big-thum').append().html("12");
+            // $('.big-thum').html('<img>').attr('src', $(this));
+    </script>
+</body>
+</html>
